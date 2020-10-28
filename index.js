@@ -24,7 +24,7 @@ app.use(express.json({ extend:true}));//FE CIEGA
 
 
 //puerto de la app
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 //process.env.PORT || 4000;
 /*a ver ha dicho que el puerto 4000 puede ser el numero
 que queramos MENOS 3000 por que el cliente ser puerto
@@ -46,6 +46,6 @@ app.use('/api/tareas', require('./routes/tareas'));
 
 
 // arrancar la app
-app.listen(PORT, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`El servidor esta funcionando en el puerto ${PORT}`);
 });
